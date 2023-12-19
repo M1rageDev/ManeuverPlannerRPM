@@ -6,7 +6,10 @@ namespace ManeuverPlannerRPM
 {
 	internal class ManeuverPlannerRPM : InternalModule
 	{
-		double prograde, normal, radialOut, relTime;
+		double prograde = 0.0;
+		double normal = 0.0;
+		double radialOut = 0.0;
+		double relTime = 0.0;
 		
 		public void SetPrograde(double prograde)
 		{
@@ -26,6 +29,21 @@ namespace ManeuverPlannerRPM
 		public void SetRelativeTime(double time)
 		{
 			this.relTime = time;
+		}
+
+		public double GetPrograde()
+		{
+			return prograde;
+		}
+
+		public double GetNormal()
+		{
+			return normal;
+		}
+
+		public double GetRadialOut()
+		{
+			return radialOut;
 		}
 
 		public void PlaceManeuver(bool state)
